@@ -7,15 +7,14 @@ from predict import predict_fruit
 
 app = FastAPI()
 
-# Allow frontend to connect (Next.js)
+# Allow frontend access
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],   # later you can restrict to localhost:3000
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
 
 @app.post("/predict")
 async def predict(file: UploadFile = File(...)):
@@ -40,3 +39,18 @@ async def predict(file: UploadFile = File(...)):
 
     except Exception as e:
         return {"error": str(e)}
+    
+
+@app.get("/model-info")
+def model_info():
+    return {
+        "model": "Fruit Classification CNN",
+        "accuracy": 0.94,
+        "classes": [
+            "Apple",
+            "Banana",
+            "Orange",
+            "Mango",
+            "Strawberry"
+        ]
+    }

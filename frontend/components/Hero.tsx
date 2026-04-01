@@ -13,25 +13,32 @@ const Hero = () => {
         className="w-full lg:w-[60%] my-auto pt-8 lg:pt-0 space-y-4"
       >
         <span className="text-primaryGreen uppercase tracking-widest font-normal text-sm">
-          Fruit Classification{" "}
+          AI Powered System
         </span>
+
         <div className="space-y-1 -ml-1">
           <h1 className="text-primaryDark text-[45px] leading-none lg:text-6xl tracking-wide uppercase font-extrabold">
-            Empowering Your
+            Smart Fruit
           </h1>
+
           <h2 className="text-[35px] leading-none lg:text-6xl uppercase text-primaryGreen tracking-wide font-extrabold">
-            Digital Journey
+            Image Classification
           </h2>
         </div>
+
         <p className="text-sm tracking-wide w-full lg:w-[90%] text-gray-700">
-          Web Development. Digital Marketing. SEO. All-in-One Solutions to
-          Elevate Your Business.
+          This project uses a Convolutional Neural Network (CNN) to
+          automatically detect and classify fruits from images. The system
+          analyzes image features using deep learning techniques and predicts
+          the fruit type with high accuracy.
         </p>
-        <ContactButton text="Get in touch" />
+
+        <ContactButton text="Try Fruit Prediction" />
       </div>
-      {/* ----------------- */}
+
+      {/* Right Section */}
       <div data-aos="zoom-out" className="w-full mt-5 lg:mt50 lg:w-[40%]">
-        <div className="">
+        <div>
           <Image
             src="/bulb.png"
             alt="Hero Image"
@@ -40,10 +47,11 @@ const Hero = () => {
             width={800}
           />
         </div>
+
         <div className="flex -mt-5 ml-3 items-center justify-center ">
           <Image
             src="/shadow.png"
-            className=" h-10 w-48"
+            className="h-10 w-48"
             alt="Hero Image"
             height={200}
             width={1000}
