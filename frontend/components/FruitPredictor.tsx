@@ -121,7 +121,7 @@ export default function FruitPredictor() {
       fruit: res.data?.fruit || res.data?.class || "Unknown",
       confidence:
         typeof res.data?.confidence === "number"
-          ? parseFloat((res.data.confidence * 100).toFixed(2))
+          ? parseFloat(res.data.confidence.toFixed(2))
           : null,
     };
   };
